@@ -68,7 +68,7 @@ let ugcList = [77554513, 96554028, 8132835, 1580739387, 30653871, 34485319, 1775
 				"Accelerator",
 				"This badge is awarded to users who are part of the Roblox Accelerator program.",
 				"https://devforum.roblox.com/t/roblox-2021-the-accelerator-program/997573",
-				"https://cdn.glitch.com/c9aca3ea-4558-456b-8206-a8f36b94cd20%2FAccelerator.svg?v=1627079847639"
+				"https://cdn.glitch.com/c9aca3ea-4558-456b-8206-a8f36b94cd20%2FAccelerator.svg"
 			))
 		}
 	}
