@@ -1,9 +1,15 @@
 # Better Roblox Badges Extension
 This is a Chrome extension that adds extra Roblox Badges.
 
+# Download
+1. Chrome Web Store  
+You can install the extension for free at https://chrome.google.com/webstore/detail/better-roblox-badges-exte/hipmiiggbfeojoehjibeedjpfpjiogel
+2. GitHub  
+In your browser, go to `chrome://extensions/` and toggle the "Enable developer mode" button in the top right, then click "load unpacked" and choose the folder where you unzipped the extension from GitHub (it should have the manifest.json file in it)
+
 # Screenshots
 <div align="center">
-<img src="/images/screenshot1.png" height=500></img>
+<img src="/images/screenshot1.png" height=400></img>
 </div>
 
 # Badges
