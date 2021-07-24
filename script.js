@@ -60,6 +60,9 @@ let ugcList = [
 		let userId = parseInt(
 			location.pathname.substring(7, location.pathname.length - 8)
 		);
+		let nameContainer = document.querySelector(".profile-name");
+		let userName = nameContainer.innerHTML;
+		console.log(userName)
 
 		console.log(userId);
 
@@ -78,8 +81,19 @@ let ugcList = [
 			...rolesData.map((x) => ({ [x.group.id]: x }))
 		);
 		console.log(rolesData);
+		
+		let inUgcProgram = ugcList.includes(userId);
+		
+		if (!inUgcProgram) {
+			let inUgcRequest = await fetch("https://catalog.roblox.com/v1/search/items?creatorName=" + userName + "&limit=10")
+			let inUgcData = await inUgcRequest.json();
+			inUgcData = inUgcData.data;
+			if (inUgcData && inUgcData.length > 1) {
+				inUgcProgram = true;
+			} 
+		}
 
-		if (ugcList.includes(userId)) {
+		if (inUgcProgram) {
 			badgeContainer.appendChild(
 				generateBadgeElement(
 					"UGC Creator",
@@ -89,10 +103,11 @@ let ugcList = [
 				)
 			);
 		}
-
-		if (
-			(rolesData[2868472] && rolesData[2868472].role.rank == 106) ||
-			rolesData[2868472].role.name == "Accelerator"
+		
+		if (													// if...
+			rolesData[2868472] &&								// the user is in the Interns group
+			(rolesData[2868472].role.rank == 106 || 			// and has a rank of 106, or...
+			rolesData[2868472].role.name == "Accelerator")		// a rank named "Accelerator"...
 		) {
 			badgeContainer.appendChild(
 				generateBadgeElement(
