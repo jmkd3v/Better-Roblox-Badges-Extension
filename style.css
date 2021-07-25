@@ -1,9 +1,13 @@
+/*
+This allows us to have an unlimited amount of Roblox Badges on our profile! 
+For debugging, you can enable this so you don't have to press "See More" to look at all the badges.
+*/
+
+/*
 .hlist.badge-list {
-    /*
-    This allows us to have an unlimited amount of Roblox Badges on our profile! 
-    */
     max-height: unset !important;
 }
+*/
 
 .jmk-badge {
     background-repeat: no-repeat !important;
